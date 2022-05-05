@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>блог | Academic</title>
+    <link>https://vdkabanova.github.io/category/%D0%B1%D0%BB%D0%BE%D0%B3/</link>
+      <atom:link href="https://vdkabanova.github.io/category/%D0%B1%D0%BB%D0%BE%D0%B3/index.xml" rel="self" type="application/rss+xml" />
+    <description>блог</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 05 May 2022 16:51:07 +0300</lastBuildDate>
+    <image>
+      <url>https://vdkabanova.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>блог</title>
+      <link>https://vdkabanova.github.io/category/%D0%B1%D0%BB%D0%BE%D0%B3/</link>
+    </image>
+    
+    <item>
+      <title>Блог 05/05</title>
+      <link>https://vdkabanova.github.io/post/post1/</link>
+      <pubDate>Thu, 05 May 2022 16:51:07 +0300</pubDate>
+      <guid>https://vdkabanova.github.io/post/post1/</guid>
+      <description>&lt;p&gt;На прошлой неделе я выполнила две лабораторные работы (№3, №4) по операционным системам, сделала первую часть индивидуального проекта. Съездила к родителям в родной город.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
