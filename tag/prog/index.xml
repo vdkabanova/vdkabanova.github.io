@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>prog | Academic</title>
+    <link>https://vdkabanova.github.io/tag/prog/</link>
+      <atom:link href="https://vdkabanova.github.io/tag/prog/index.xml" rel="self" type="application/rss+xml" />
+    <description>prog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vdkabanova.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>prog</title>
+      <link>https://vdkabanova.github.io/tag/prog/</link>
+    </image>
+    
+    <item>
+      <title>Программирование</title>
+      <link>https://vdkabanova.github.io/project/example/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://vdkabanova.github.io/project/example/</guid>
+      <description>&lt;p&gt;Программирование — это процесс создания программ (программного обеспечения). Для этого программисты пишут исходный код на одном из языков программирования.&lt;/p&gt;
+&lt;p&gt;Существует более 300 языков программирования, но для успешной карьеры можно выбирать из десяти самых популярных. Еще правильнее будет сначала определиться с областью, в которой вы собираетесь работать, и только потом приступать к выбору языка.&lt;/p&gt;
+&lt;p&gt;Одним из лучших языков для начинающих является Python. Этот популярный язык общего назначения хорош лаконичностью и простотой синтаксиса, его активно используют в IT-компаниях России и мира.&lt;/p&gt;
+&lt;p&gt;Другими популярными языками считаются Java и C. Они сложнее, особенно для новичков, но владение ими обеспечивает лучшее понимание того, что вы делаете и что происходит с вашей программой. Вместе с языком Pascal язык С обычно изучается в вузе на профильных факультетах.&lt;/p&gt;
+&lt;p&gt;Использование других языков программирования зависит от цели деятельности. Например, в качестве серверных языков популярны php, Java, ruby. Из клиентских языков наиболее перспективен Java Script. Для разработки сложных высоконагруженных проектов требуется C++. На этом же языке пишутся игры. Еще одна перспективная сфера — разработка приложений для мобильных устройств. Тут используют Java, Objective-C, Swift. Любой опытный программист знает несколько языков, однако код на работе он пишет только на одном из них.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
