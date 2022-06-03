@@ -57,17 +57,19 @@
   
   
 
-  <meta name="author" content="Варвара Кабанова" />
+  <meta name="author" content="Varvara Kabanova" />
 
   
   
   
     
   
-  <meta name="description" content="Вступление
-Маленький рецепт, который будет полезен при создании динамических отчетов.
-Достаточно часто встречается ситуация, когда размер и содержание отчетной формы будет зависеть от состава переданных на вход данных. Речь идет именно о story-telling отчете, а не о простом выводе таблицы." />
+  <meta name="description" content="Introduction
+A small recipe that will be useful when creating dynamic reports.
+Quite often there is a situation when the size and content of the reporting form will depend on the composition of the data transmitted to the input." />
 
+  
+    <link rel="alternate" hreflang="ru" href="https://vdkabanova.github.io/ru/post/post6/" />
   
   <link rel="alternate" hreflang="en-us" href="https://vdkabanova.github.io/post/post6/" />
 
@@ -310,10 +312,10 @@
   
   <meta property="og:site_name" content="Academic" />
   <meta property="og:url" content="https://vdkabanova.github.io/post/post6/" />
-  <meta property="og:title" content="Создание отчета | Academic" />
-  <meta property="og:description" content="Вступление
-Маленький рецепт, который будет полезен при создании динамических отчетов.
-Достаточно часто встречается ситуация, когда размер и содержание отчетной формы будет зависеть от состава переданных на вход данных. Речь идет именно о story-telling отчете, а не о простом выводе таблицы." /><meta property="og:image" content="https://vdkabanova.github.io/post/post6/featured.jpg" />
+  <meta property="og:title" content="Create a report | Academic" />
+  <meta property="og:description" content="Introduction
+A small recipe that will be useful when creating dynamic reports.
+Quite often there is a situation when the size and content of the reporting form will depend on the composition of the data transmitted to the input." /><meta property="og:image" content="https://vdkabanova.github.io/post/post6/featured.jpg" />
     <meta property="twitter:image" content="https://vdkabanova.github.io/post/post6/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +350,7 @@
     "@type": "WebPage",
     "@id": "https://vdkabanova.github.io/post/post6/"
   },
-  "headline": "Создание отчета",
+  "headline": "Create a report",
   
   "image": [
     "https://vdkabanova.github.io/post/post6/featured.jpg"
@@ -359,7 +361,7 @@
   
   "author": {
     "@type": "Person",
-    "name": "Варвара Кабанова"
+    "name": "Varvara Kabanova"
   },
   
   "publisher": {
@@ -370,7 +372,7 @@
       "url": "https://vdkabanova.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Вступление\nМаленький рецепт, который будет полезен при создании динамических отчетов.\nДостаточно часто встречается ситуация, когда размер и содержание отчетной формы будет зависеть от состава переданных на вход данных. Речь идет именно о story-telling отчете, а не о простом выводе таблицы."
+  "description": "Introduction\nA small recipe that will be useful when creating dynamic reports.\nQuite often there is a situation when the size and content of the reporting form will depend on the composition of the data transmitted to the input."
 }
 </script>
 
@@ -386,7 +388,7 @@
 
 
 
-  <title>Создание отчета | Academic</title>
+  <title>Create a report | Academic</title>
 </head>
 
 
@@ -755,6 +757,22 @@
 
         
         
+        <li class="nav-item dropdown i18n-dropdown">
+          <a href="#" class="nav-link " data-toggle="dropdown"
+             aria-haspopup="true" aria-label="Languages">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-item dropdown-item-active">
+              <span>English</span>
+            </div>
+            
+            <a class="dropdown-item" href="https://vdkabanova.github.io/ru/post/post6/">
+              <span>Русский</span>
+            </a>
+            
+          </div>
+        </li>
+        
 
       </ul>
 
@@ -799,7 +817,7 @@
 
 
 <div class="article-container pt-3">
-  <h1>Создание отчета</h1>
+  <h1>Create a report</h1>
 
   
   <p class="page-subtitle">github</p>
@@ -818,7 +836,7 @@
     
 
   <span >
-      Варвара Кабанова</span>
+      Varvara Kabanova</span>
   </div>
   
   
@@ -873,31 +891,31 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p><strong>Вступление</strong></p>
-<p>Маленький рецепт, который будет полезен при создании динамических отчетов.</p>
-<p>Достаточно часто встречается ситуация, когда размер и содержание отчетной формы будет зависеть от состава переданных на вход данных. Речь идет именно о story-telling отчете, а не о простом выводе таблицы. В этом случае, в зависимости от содержания входных данных, могут появляться или исчезать отдельные пункты, графики, таблицы, текст.</p>
-<p>Что будет делать классический Excel-Word аналитик? Под каждый новый запрос делать кастомный отчет и сохранять его в отдельный файл. Но можно заглянуть немного под капот и заставить компьютер делать все самостоятельно.</p>
-<p>R Markdown позволяет все это выполнить в элегантной форме. Некоторые технические детали ниже.</p>
-<p><strong>Основная идея</strong></p>
-<p>У нас есть данные, содержание которых может меняться. Например, надо строить отчет по машинам, развозящим грузы (пример абстрактный). Количество и номера машин, выходящих в рейс, каждый день разные, но сводка по каждой машине по своей структуре одинакова. Будем отталкиваться от этого.</p>
-<p>R Markdown выполняется в несколько проходов. При этом из Rmd сначала формируется .md, а потом из него формируется выходное представление, наиболее популярным является html формат.</p>
-<p>Итого, намечаются 2 варианта.</p>
+      <p><strong>Introduction</strong></p>
+<p>A small recipe that will be useful when creating dynamic reports.</p>
+<p>Quite often there is a situation when the size and content of the reporting form will depend on the composition of the data transmitted to the input. We are talking about a story-telling report, and not about a simple table output. In this case, depending on the content of the input data, individual items, graphs, tables, text may appear or disappear.</p>
+<p>What will a classic Excel-Word analyst do? For each new request, make a custom report and save it to a separate file. But you can look a little under the hood and make the computer do everything on its own.</p>
+<p>R Markdown lets you do all this in an elegant way. Some technical details below.</p>
+<p><strong>Main idea</strong></p>
+<p>We have data, the content of which may change. For example, it is necessary to build a report on cars delivering goods (abstract example). The number and numbers of cars leaving for the flight are different every day, but the summary for each car is the same in its structure. Let&rsquo;s move on from this.</p>
+<p>R Markdown is done in multiple passes. At the same time, .md is first formed from Rmd, and then the output representation is formed from it, the most popular is the html format.</p>
+<p>In total, there are 2 options.</p>
 <ul>
 <li>
-<p>Можно на этапе компиляции отчета вставить в компилируемый .Rmd нужные блоки (собранные или шаблонизированные).</p>
+<p>You can insert the necessary blocks (assembled or templated) into the compiled .Rmd at the stage of compiling the report.</p>
 </li>
 <li>
-<p>Можно на этапе компиляции отчета вставить в промежуточный .md нужные markdown вставки.</p>
+<p>You can insert the necessary markdown inserts into the intermediate .md at the stage of compiling the report.</p>
 </li>
 </ul>
-<p><strong>Реализация</strong></p>
-<p>Ниже просто пример кода, который каждый желающий может запустить у себя на машине. Он охватывает реализации обоих примеров и минимален, чтобы передать суть.</p>
+<p><strong>Implementation</strong></p>
+<p>Below is just an example of code that anyone can run on their machine. It covers implementations of both examples and is minimal to get the point across.</p>
 <ul>
 <li>
-<p>Динамически вставляем гиперссылки, получаемые из внешнего источника.</p>
+<p>Dynamically insert hyperlinks received from an external source.</p>
 </li>
 <li>
-<p>Динамически формируем разделы документов на основании данных.</p>
+<p>Dynamically generate document sections based on data.</p>
 </li>
 </ul>
 
@@ -921,7 +939,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://vdkabanova.github.io/post/post6/&amp;text=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://vdkabanova.github.io/post/post6/&amp;text=Create%20a%20report" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -934,7 +952,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://vdkabanova.github.io/post/post6/&amp;t=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://vdkabanova.github.io/post/post6/&amp;t=Create%20a%20report" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -947,7 +965,7 @@
       
       
       <li>
-        <a href="mailto:?subject=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0&amp;body=https://vdkabanova.github.io/post/post6/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Create%20a%20report&amp;body=https://vdkabanova.github.io/post/post6/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -960,7 +978,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://vdkabanova.github.io/post/post6/&amp;title=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https://vdkabanova.github.io/post/post6/&amp;title=Create%20a%20report" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -973,7 +991,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0%20https://vdkabanova.github.io/post/post6/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Create%20a%20report%20https://vdkabanova.github.io/post/post6/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -986,7 +1004,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://vdkabanova.github.io/post/post6/&amp;title=%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5%20%d0%be%d1%82%d1%87%d0%b5%d1%82%d0%b0" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://vdkabanova.github.io/post/post6/&amp;title=Create%20a%20report" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

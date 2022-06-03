@@ -70,141 +70,141 @@
     </item>
     
     <item>
-      <title>Легковесные языки разметки</title>
-      <link>https://vdkabanova.github.io/post/post4/</link>
-      <pubDate>Thu, 05 May 2022 17:20:53 +0300</pubDate>
-      <guid>https://vdkabanova.github.io/post/post4/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Язык разметки с простым ненавязчивым синтаксисом&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A облегченный язык разметки (LML ), также называемый простым или гуманным языком разметки , представляет собой язык разметки с простым, ненавязчивым синтаксисом . Он разработан таким образом, чтобы его было легко писать с использованием любого общего и легко читать в необработанном виде. Облегченные языки разметки используются в приложениях, где может потребоваться прочитать необработанный документ, а также окончательный визуализированный вывод.&lt;/p&gt;
-&lt;p&gt;Например, человек, загружающий библиотеку программного обеспечения, может предпочесть читать документацию в текстовом редакторе, а не в веб-браузере. Еще одно приложение для таких языков - обеспечение ввода данных в веб-публикациях , таких как веб-журналы и вики , где интерфейс ввода представляет собой простой текстовое поле . Серверное программное обеспечение затем преобразует ввод в общий язык разметки документов , например HTML .&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;История&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Облегченные языки разметки изначально использовались на текстовых дисплеях, которые не могли отображать символы, выделенные курсивом или жирный , поэтому пришлось разработать неформальные методы передачи этой информации. Этот выбор форматирования, естественно, был применен к обычным текстовым сообщениям электронной почты. Консольные браузеры также могут прибегать к аналогичным соглашениям об отображении.&lt;/p&gt;
-&lt;p&gt;В 1986 году международный стандарт SGML предоставил средства для определения и анализа облегченных языков разметки с использованием грамматик и импликации тегов. 1998 W3C XML - это профиль SGML, в котором эти возможности отсутствуют. Однако определение типа документа (DTD) SGML для любого из перечисленных ниже языков неизвестно.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Типы&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Легкие языки разметки можно разделить на категории по типам их тегов. Подобно HTML (полужирный ), в некоторых языках используются именованные элементы, которые имеют общий формат для начальных и конечных тегов (например, BBCode[b] жирный [ / b] ), тогда как правильные упрощенные языки разметки ограничены ASCII -только знаками препинания и другими небуквенными символами для тегов, но некоторые также смешивают оба стиля (например, Textile bq. ) или разрешить встроенный HTML (например, Markdown ), возможно, расширенный пользовательскими элементами (например, MediaWiki source ).&lt;/p&gt;
-&lt;p&gt;Большинство языков различают разметку для строк или блоков и для более коротких отрезков текста, но некоторые поддерживают только встроенную разметку.&lt;/p&gt;
-&lt;p&gt;Некоторые языки разметки предназначены для определенной цели, например, для документирования компьютерного кода (например, POD , RD) или для преобразования в определенный выходной формат (обычно HTML) и ничего больше, другие более вообще в приложении. Сюда входит, ориентированы ли они на текстовое представление или на сериализацию данных.&lt;/p&gt;
-&lt;p&gt;Языки, ориентированные на представление, включают AsciiDoc , atx , BBCode, креольский , Crossmark, Epytext , Haml , JsonML , MakeDoc , Markdown, Org-mode , POD, reST , RD, Setext , SiSU , SPIP , Xupl , Texy! , Текстиль , txt2tags , UDO и Wikitext .&lt;/p&gt;
-&lt;p&gt;Языки, ориентированные на сериализацию данных, включают Curl (гомоиконный, но также читает JSON; каждый объект сериализуется), JSON и YAML .&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Создание отчета</title>
+      <title>Create a report</title>
       <link>https://vdkabanova.github.io/post/post6/</link>
       <pubDate>Thu, 05 May 2022 17:20:53 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post6/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Вступление&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Маленький рецепт, который будет полезен при создании динамических отчетов.&lt;/p&gt;
-&lt;p&gt;Достаточно часто встречается ситуация, когда размер и содержание отчетной формы будет зависеть от состава переданных на вход данных. Речь идет именно о story-telling отчете, а не о простом выводе таблицы. В этом случае, в зависимости от содержания входных данных, могут появляться или исчезать отдельные пункты, графики, таблицы, текст.&lt;/p&gt;
-&lt;p&gt;Что будет делать классический Excel-Word аналитик? Под каждый новый запрос делать кастомный отчет и сохранять его в отдельный файл. Но можно заглянуть немного под капот и заставить компьютер делать все самостоятельно.&lt;/p&gt;
-&lt;p&gt;R Markdown позволяет все это выполнить в элегантной форме. Некоторые технические детали ниже.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Основная идея&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;У нас есть данные, содержание которых может меняться. Например, надо строить отчет по машинам, развозящим грузы (пример абстрактный). Количество и номера машин, выходящих в рейс, каждый день разные, но сводка по каждой машине по своей структуре одинакова. Будем отталкиваться от этого.&lt;/p&gt;
-&lt;p&gt;R Markdown выполняется в несколько проходов. При этом из Rmd сначала формируется .md, а потом из него формируется выходное представление, наиболее популярным является html формат.&lt;/p&gt;
-&lt;p&gt;Итого, намечаются 2 варианта.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A small recipe that will be useful when creating dynamic reports.&lt;/p&gt;
+&lt;p&gt;Quite often there is a situation when the size and content of the reporting form will depend on the composition of the data transmitted to the input. We are talking about a story-telling report, and not about a simple table output. In this case, depending on the content of the input data, individual items, graphs, tables, text may appear or disappear.&lt;/p&gt;
+&lt;p&gt;What will a classic Excel-Word analyst do? For each new request, make a custom report and save it to a separate file. But you can look a little under the hood and make the computer do everything on its own.&lt;/p&gt;
+&lt;p&gt;R Markdown lets you do all this in an elegant way. Some technical details below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Main idea&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We have data, the content of which may change. For example, it is necessary to build a report on cars delivering goods (abstract example). The number and numbers of cars leaving for the flight are different every day, but the summary for each car is the same in its structure. Let&amp;rsquo;s move on from this.&lt;/p&gt;
+&lt;p&gt;R Markdown is done in multiple passes. At the same time, .md is first formed from Rmd, and then the output representation is formed from it, the most popular is the html format.&lt;/p&gt;
+&lt;p&gt;In total, there are 2 options.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Можно на этапе компиляции отчета вставить в компилируемый .Rmd нужные блоки (собранные или шаблонизированные).&lt;/p&gt;
+&lt;p&gt;You can insert the necessary blocks (assembled or templated) into the compiled .Rmd at the stage of compiling the report.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Можно на этапе компиляции отчета вставить в промежуточный .md нужные markdown вставки.&lt;/p&gt;
+&lt;p&gt;You can insert the necessary markdown inserts into the intermediate .md at the stage of compiling the report.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Реализация&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ниже просто пример кода, который каждый желающий может запустить у себя на машине. Он охватывает реализации обоих примеров и минимален, чтобы передать суть.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Below is just an example of code that anyone can run on their machine. It covers implementations of both examples and is minimal to get the point across.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Динамически вставляем гиперссылки, получаемые из внешнего источника.&lt;/p&gt;
+&lt;p&gt;Dynamically insert hyperlinks received from an external source.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Динамически формируем разделы документов на основании данных.&lt;/p&gt;
+&lt;p&gt;Dynamically generate document sections based on data.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
-      <title>Управление версиями. Git</title>
-      <link>https://vdkabanova.github.io/post/post2/</link>
+      <title>Lightweight markup languages</title>
+      <link>https://vdkabanova.github.io/post/post4/</link>
       <pubDate>Thu, 05 May 2022 17:20:53 +0300</pubDate>
-      <guid>https://vdkabanova.github.io/post/post2/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Что такое «система контроля версий» и почему это важно?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Система управления версиями (Version Control System, VCS) — это программное обеспечение для облегчения работы с изменяющейся информацией. Система управления версиями позволяет хранить несколько версий одного и того же документа, при необходимости возвращаться к более ранним версиям, определять, кто и когда сделал то или иное изменение, и многое другое. Такие системы наиболее широко используются при разработке программного обеспечения для хранения исходных кодов разрабатываемой программы.&lt;/p&gt;
-&lt;p&gt;GIT — распределённая система управления версиями, созданная Линусом Торвальдсом для управления разработкой ядра Linux и в настоящее время получившая очень широкое распространение в среде разработчиков программного обеспечения.&lt;/p&gt;
-&lt;p&gt;В GIT используется распределённая модель вместо традиционной клиент-серверной. Таким образом, репозитории GIT не нуждаются в централизованном хранилище: вся история изменения документов хранится на каждом компьютере, в локальном хранилище, и при необходимости отдельные фрагменты истории локального хранилища синхронизируются с аналогичным хранилищем на другом компьютере.&lt;/p&gt;
-&lt;p&gt;На сегодняшний день, GIT стал стандартной системой управления версиями для очень многих разработчиков, а хостинг исходных кодов GitHub — самым крупным подобным сервисом. Примерами проектов, использующих Git, являются ядро Linux, Android, Ruby on Rails, Drupal, Wine, Chromium, Compiz Fusion, jQuery, PHP, MediaWiki и некоторые дистрибутивы Linux&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Зачем новичку учить Git?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Git используется в большинстве компаний, где над проектом работает хотя бы два разработчика:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Новый человек приходит в компанию и клонирует репозиторий проекта на ПК.&lt;/li&gt;
-&lt;li&gt;Получает задачу, создаёт новую ветку и пишет код.&lt;/li&gt;
-&lt;li&gt;Когда всё готово — отправляет запрос на добавление кода в master-ветку.&lt;/li&gt;
-&lt;li&gt;Другие разработчики смотрят код, оставляют комментарии и указывают на ошибки.&lt;/li&gt;
-&lt;li&gt;Новичок дорабатывает код, обновляет master-ветку и переходит к следующей задаче.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Это общая схема того, как проходит командная работа в проекте. В ней не учтены правила использования Git, которые каждая команда пишет под себя. Например, у каждой команды свой порядок проверки кода и свои критерии его готовности для добавления в master-ветку.&lt;/p&gt;
-&lt;p&gt;Знание Git и знание правил использования Git в команде — это два разных навыка, которые можно сравнить с умением ездить на автомобиле и знанием правил дорожного движения. Если умеете управлять автомобилем — вам проще сконцентрироваться и быстро выучить правила. С Git аналогичная ситуация: если вы умеете управлять системой контроля версий, то можете сразу влиться в проект, не отвлекаться на второстепенные вещи и сосредоточиться на качестве кода.&lt;/p&gt;
+      <guid>https://vdkabanova.github.io/post/post4/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Markup language with simple unobtrusive syntax&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A Lightweight Markup Language (LML), also called Plain Markup Language or Humane Markup Language, is a markup language with a simple, unobtrusive syntax. It is designed to be easy to write using any generic and easy to read in raw form. Lightweight markup languages ​​are used in applications where the raw document may need to be read as well as the final rendered output.&lt;/p&gt;
+&lt;p&gt;For example, a person downloading a software library may prefer to read the documentation in a text editor rather than in a web browser. Another application for such languages ​​is to provide data entry in web publications, such as weblogs and wikis, where the input interface is a simple text field. The server software then converts the input into a common document markup language such as HTML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Story&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lightweight markup languages ​​were originally used on text displays that could not display italic or bold characters, so informal methods had to be developed to communicate this information. This formatting choice has naturally been applied to plain text emails. Console browsers may also use similar rendering conventions.&lt;/p&gt;
+&lt;p&gt;In 1986, the international standard SGML provided a means to define and parse lightweight markup languages ​​using grammars and tag implication. 1998 W3C XML is an SGML profile that does not have these features. However, the SGML Document Type Definition (DTD) for any of the languages ​​listed below is not known.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Types&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lightweight markup languages ​​can be categorized by their tag types. Similar to HTML (bold), some languages ​​use named elements that have a common format for start and end tags (e.g. BBCode[b] bold [ / b] ), while proper simplified markup languages ​​are limited to ASCII-only punctuation and others non-letter characters for tags, but some also mix both styles (eg Textile bq. ) or allow inline HTML (eg Markdown ), perhaps extended with custom elements (eg MediaWiki source ).&lt;/p&gt;
+&lt;p&gt;Most languages ​​distinguish between markup for lines or blocks and shorter sections of text, but some only support inline markup.&lt;/p&gt;
+&lt;p&gt;Some markup languages ​​are designed for a specific purpose, such as documenting computer code (e.g. POD, RD) or converting to a specific output format (usually HTML) and nothing else, others more generally in an application. This includes whether they are oriented towards text representation or data serialization.&lt;/p&gt;
+&lt;p&gt;Presentation-oriented languages ​​include AsciiDoc, atx, BBCode, Creole, Crossmark, Epytext, Haml, JsonML, MakeDoc, Markdown, Org-mode, POD, reST, RD, Setext, SiSU, SPIP, Xupl, Texy! , Textile , txt2tags , UDO and Wikitext .&lt;/p&gt;
+&lt;p&gt;Data serialization-oriented languages ​​include Curl (homoicon, but also reads JSON; each object is serialized), JSON, and YAML.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Языки научного программирования</title>
+      <title>Scientific programming languages</title>
       <link>https://vdkabanova.github.io/post/post8/</link>
       <pubDate>Thu, 05 May 2022 17:20:53 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post8/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Программирование в науке: актуальность и востребованность&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Программирование часто упоминают в прикладном контексте. Кажется, с его помощью создают только мобильные приложения, интернет-системы и спецэффекты для кино. Но первоначально программирование предназначалось для решения научных задач. Кроме того, программирование само — наука, узнать о которой будет полезно тем, кто решил связать карьеру с компьютерной разработкой.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Общая информация&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Научное программирование — высокоориентированный стиль программирования для научных расчетов. От других видов программирования его отличают предельные корректность и стабильность конечного продукта, строгое разделение научной и интерфейсной частей, индивидуальность алгоритмов, а также преобладание эффективности над универсальностью.&lt;/p&gt;
-&lt;p&gt;Научное программирование лежит в основе любого современного глобального исследования. Все передовые технологии — от квантовых компьютеров до космических программ — были бы невозможны без специалистов в области научного программирования, способных предоставить ученым надежный и точный инструмент для совершения открытий.&lt;/p&gt;
-&lt;p&gt;Ряд отраслей науки непосредственно зависят от уровня развития научного программирования. Так, своего исполнения ждут беспилотный транспорт, «умные» системы управления городским и сельским хозяйством, фондовыми биржами; ждут робототехника, генная инженерия, искусственный интеллект, превосходящий возможности человека.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Специализация&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ученые используют различные языки программирования, выбор которых зависит от типа задачи и предпочтений автора. Исторически первым высокоуровневым языком программирования является Fortran, на нем написано много отлаженных библиотек математической статистики и библиотек для решения дифференциальных уравнений, что актуально для экономики и биологии соответственно.&lt;/p&gt;
-&lt;p&gt;Более простым синтаксисом обладает Python, также подходящий для программирования математических вычислений. Язык Python привлекается для обработки данных в математике, физике, экономике, биологии, химии и умеет работать с некоторыми другими «научными» языками: Fortran, C++, C#.&lt;/p&gt;
-&lt;p&gt;В свою очередь C# позволяет программировать на платформе .NET, адаптировать программу к общеязыковой исполняющей среде (CLR) и ускорить разработку в рамках оперативных научных сессий.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Будущее профессии программист-ученый&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Программирование двигает науку, которая двигает технический прогресс. Изобретения, которые считались революционными вчера, в XXI веке служат бытовым потребностям: СВЧ-печь, мобильный телефон, 8-битная домашняя ЭВМ. От программиста-ученого зависит, каких вершин достигнет наука сегодня и какие из них завтра войдут в каждый дом.&lt;/p&gt;
-&lt;p&gt;В руках программиста-ученого находятся инструменты не только для развития промышленности, но и для повышения общего качества жизни. Такой специалист увеличивает прогностическую функцию человечества, помогая предугадывать и предотвращать климатические, финансовые, гуманитарные катастрофы.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Где научиться программированию?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Освоить программирование можно как и где угодно. Специализированная литература, очное обучение, интернет-площадки — все эти ресурсы способны обеспечить начинающего программиста базой знаний, достаточной для самостоятельного творчества и повышения квалификации, в том числе в русле научной разработки.&lt;/p&gt;
-&lt;p&gt;Портал GeekBrains предлагает пользователям бесплатные курсы для новичков в программировании. Дополнительно проводится подготовка по 15 профессиям, наиболее востребованным на рынке труда: программист Python, разработчик C#, Senior Web Developer и другие. По завершении каждого курса выпускникам гарантируется стажировка от GeekBrains&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Programming in science: relevance and relevance&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programming is often mentioned in an applied context. It seems that only mobile applications, Internet systems and special effects for cinema are created with its help. But initially programming was intended to solve scientific problems. In addition, programming itself is a science, which will be useful to learn about for those who decide to link their careers with computer development.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;General information&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Scientific programming is a highly oriented programming style for scientific computing. It is distinguished from other types of programming by the extreme correctness and stability of the final product, the strict separation of scientific and interface parts, the individuality of algorithms, and the predominance of efficiency over universality.&lt;/p&gt;
+&lt;p&gt;Scientific programming is at the heart of any modern global research. All advanced technologies - from quantum computers to space programs - would not be possible without scientific programmers who can provide scientists with a reliable and accurate tool for making discoveries.&lt;/p&gt;
+&lt;p&gt;A number of branches of science directly depend on the level of development of scientific programming. So, unmanned vehicles, “smart” management systems for urban and agricultural management, stock exchanges are waiting for their implementation; waiting for robotics, genetic engineering, artificial intelligence that surpasses human capabilities.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Specialization&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Scientists use various programming languages, the choice of which depends on the type of problem and the preferences of the author. Historically, the first high-level programming language is Fortran; many debugged libraries of mathematical statistics and libraries for solving differential equations are written on it, which is relevant for economics and biology, respectively.&lt;/p&gt;
+&lt;p&gt;Python has a simpler syntax, which is also suitable for programming mathematical calculations. The Python language is used for data processing in mathematics, physics, economics, biology, chemistry and can work with some other &amp;ldquo;scientific&amp;rdquo; languages: Fortran, C++, C#.&lt;/p&gt;
+&lt;p&gt;In turn, C# allows you to program on the .NET platform, adapt the program to the common language runtime (CLR), and accelerate development within the framework of operational scientific sessions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The future of the programmer-scientist profession&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programming drives science, which drives technological progress. Inventions that were considered revolutionary yesterday serve everyday needs in the 21st century: a microwave oven, a mobile phone, an 8-bit home computer. It depends on the programmer-scientist what peaks science will reach today and which of them will enter every house tomorrow.&lt;/p&gt;
+&lt;p&gt;In the hands of a programmer-scientist are the tools not only to develop the industry, but also to improve the overall quality of life. Such a specialist increases the prognostic function of humanity, helping to predict and prevent climate, financial, and humanitarian disasters.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Where can I learn to code?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can learn programming anytime, anywhere. Specialized literature, face-to-face training, Internet sites - all these resources are able to provide a novice programmer with a knowledge base sufficient for independent creativity and advanced training, including in line with scientific development.&lt;/p&gt;
+&lt;p&gt;The GeekBrains portal offers users free courses for beginners in programming. Additionally, training is provided for 15 professions that are most in demand on the labor market: Python programmer, C # developer, Senior Web Developer and others. Upon completion of each course, graduates are guaranteed an internship from GeekBrains&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Блог 05/05</title>
+      <title>Versioning. Git</title>
+      <link>https://vdkabanova.github.io/post/post2/</link>
+      <pubDate>Thu, 05 May 2022 17:20:53 +0300</pubDate>
+      <guid>https://vdkabanova.github.io/post/post2/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;What is a &amp;ldquo;version control system&amp;rdquo; and why is it important?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A Version Control System (VCS) is software that makes it easier to work with changing information. The version control system allows you to store multiple versions of the same document, revert to earlier versions if necessary, determine who made a change and when, and much more. Such systems are most widely used in software development to store the source codes of the program being developed.&lt;/p&gt;
+&lt;p&gt;GIT is a distributed version control system created by Linus Torvalds to manage the development of the Linux kernel and is currently very widespread among software developers.&lt;/p&gt;
+&lt;p&gt;GIT uses a distributed model instead of the traditional client-server model. Thus, GIT repositories do not need a centralized repository: the entire history of document changes is stored on each computer, in local storage, and, if necessary, individual fragments of the local storage history are synchronized with the same storage on another computer.&lt;/p&gt;
+&lt;p&gt;Today, GIT has become the standard version control system for so many developers, and GitHub source code hosting is the largest such service. Examples of projects using Git are the Linux kernel, Android, Ruby on Rails, Drupal, Wine, Chromium, Compiz Fusion, jQuery, PHP, MediaWiki, and some Linux distributions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why should a beginner learn Git?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Git is used in most companies where at least two developers work on a project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A new person comes to the company and clones the project repository on the PC.&lt;/li&gt;
+&lt;li&gt;Gets an issue, creates a new branch, and writes the code.&lt;/li&gt;
+&lt;li&gt;When everything is ready - sends a request to add code to the master branch.&lt;/li&gt;
+&lt;li&gt;Other developers look at the code, leave comments and point out bugs.&lt;/li&gt;
+&lt;li&gt;A beginner refines the code, updates the master branch and moves on to the next task.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a general outline of how teamwork works in a project. It does not take into account the rules for using Git, which each team writes for itself. For example, each team has its own code review order and its own criteria for its readiness to be added to the master branch.&lt;/p&gt;
+&lt;p&gt;Knowing Git and knowing how to use Git in a team are two different skills that can be compared to knowing how to drive a car and knowing the rules of the road. If you know how to drive a car, it is easier for you to concentrate and quickly learn the rules. With Git, the situation is similar: if you know how to manage the version control system, then you can immediately join the project, not be distracted by secondary things and focus on the quality of the code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Blog 05/05</title>
       <link>https://vdkabanova.github.io/post/post1/</link>
       <pubDate>Thu, 05 May 2022 16:51:07 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post1/</guid>
-      <description>&lt;p&gt;На прошлой неделе я выполнила две лабораторные работы (№3, №4) по операционным системам, сделала первую часть индивидуального проекта. Съездила к родителям в родной город.&lt;/p&gt;
+      <description>&lt;p&gt;Last week, I completed two labs (#3, #4) on operating systems, and did the first part of an individual project. I went to my parents in my hometown.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Блог 12/05</title>
+      <title>Blog 12/05</title>
       <link>https://vdkabanova.github.io/post/post3/</link>
       <pubDate>Thu, 05 May 2022 16:51:07 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post3/</guid>
-      <description>&lt;p&gt;На прошлой неделе я выполнила две лабораторные работы (№5, №6) по операционным системам, сделала вторую часть индивидуального проекта. Устроилась на работу, снимала хоккейный матч мирэа-рудн&lt;/p&gt;
+      <description>&lt;p&gt;Last week, I completed two labs (#5, #6) on operating systems, and did the second part of an individual project. I got a job, filmed a hockey match mirea-rudn&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Блог 19/05</title>
+      <title>Blog 19/05</title>
       <link>https://vdkabanova.github.io/post/post5/</link>
       <pubDate>Thu, 05 May 2022 16:51:07 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post5/</guid>
-      <description>&lt;p&gt;На прошлой неделе я выполнила две лабораторные работы (№7, №8) по операционным системам, устроилась на работу&lt;/p&gt;
+      <description>&lt;p&gt;Last week I completed two labs (#7, #8) on operating systems, got a job&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Блог 27/05</title>
+      <title>Blog 27/05</title>
       <link>https://vdkabanova.github.io/post/post7/</link>
       <pubDate>Thu, 05 May 2022 16:51:07 +0300</pubDate>
       <guid>https://vdkabanova.github.io/post/post7/</guid>
-      <description>&lt;p&gt;На прошлой неделе я выполнила две лабораторные работы (№9, №10) по операционным системам, cходила в большой и малый театр&lt;/p&gt;
+      <description>&lt;p&gt;Last week I completed two labs (# 9, # 10) on operating systems, went to the Bolshoi and Maly Theater&lt;/p&gt;
 </description>
     </item>
     

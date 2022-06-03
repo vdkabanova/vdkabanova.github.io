@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pithon | Academic</title>
+    <link>https://vdkabanova.github.io/ru/tag/pithon/</link>
+      <atom:link href="https://vdkabanova.github.io/ru/tag/pithon/index.xml" rel="self" type="application/rss+xml" />
+    <description>pithon</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>ru</language><lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vdkabanova.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>pithon</title>
+      <link>https://vdkabanova.github.io/ru/tag/pithon/</link>
+    </image>
+    
+    <item>
+      <title>Язык программирования ПИТОН</title>
+      <link>https://vdkabanova.github.io/ru/project/example3/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://vdkabanova.github.io/ru/project/example3/</guid>
+      <description>&lt;p&gt;Python — это высокоуровневый язык программирования общего назначения, который используется в том числе и для разработки веб-приложений. Язык ориентирован на повышение производительности разработчика и читаемости кода.&lt;/p&gt;
+&lt;p&gt;Правильное русское произношение названия языка программирования — Пайтон, но чаще используется искажённое — Питон.&lt;/p&gt;
+&lt;p&gt;Python поддерживает несколько парадигм программирования: структурное, объектно-ориентированное, функциональное, императивное и аспектно-ориентированное. В языке присутствет динамическая типизация, автоматическое управление памятью, полная интроспекция, механизм обработки исключений, поддержка многопоточных вычислений и удобные высокоуровневые структуры данных. Программный код на Python организовывается в функции и классы, которые могут объединяться в модули, а они в свою очередь могут быть объединены в пакеты. Python обычно используется как интерпретируемый, но может быть скомпилирован в байт-код Java и в MSIL (в рамках платфоры .NET).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
